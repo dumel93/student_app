@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <form action="" method="POST">{% csrf_token %}
+        Are you sure to delete this student?: <strong>{{student}}</strong> <br>
+        <input type="submit" class="glyphicon-remove-circle" value="Delete">
+    </form>
+
+{% endblock %}

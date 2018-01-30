@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<h2>Groups:</h2>
+
+        <ul class="list-group">
+            {% for class in class_list %}
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="/content/class/{{ class.0 }}">{{ class.1 }}</a>
+              </li>
+            {% endfor %}
+        </ul>
+{% endblock %}

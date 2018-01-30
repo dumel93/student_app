@@ -1,0 +1,14 @@
+{% extends 'content/student_form.html' %}
+
+{% block results %}
+
+    <ul>
+        <br>
+        {% for result in results %}
+        <li><a href ="{{result.get_absolute_url}}">{{result}}</a></li>
+        {% empty %}
+           Empty
+        {% endfor %}
+    </ul>
+
+{% endblock %}

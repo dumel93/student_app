@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1><i>{{subject.name}}</i></h1><br/>
+    Lecturer: {{subject.teacher_name}}<br>
+    Student:    {{student.name}},
+    {{class_name}} <br/>
+
+    <ul>
+        {% for student_grade in grades %}
+            <li>{{student_grade.get_grade_display}}</li>
+        {% empty %}
+            There are not any grades yet
+        {% endfor %}
+    </ul>
+mean:   <b><i>{{ grades_avg|floatformat:"2" }}</i></b>
+
+{% endblock %}
